@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" [routerLink]="['/Home']">RxJS</a>
+        <strong class="badge bg-primary" *ngIf="exclusive">Exclusive</strong>
+        <button class="navbar-toggler" (click)="onNavToggle()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [class.show]="navOpen" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="['/promoise']">Promise</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/debounceTime']">DebounceTime</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

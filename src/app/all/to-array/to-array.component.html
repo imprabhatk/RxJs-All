@@ -1,0 +1,45 @@
+<div class="my-3">
+    <h2>To Array</h2>
+    <div class="mt-2">
+        <div class="row">
+            <div class="col-md-2">
+                <p>Ex - 1 </p>
+                <ul *ngFor = "let data of results " >
+                    <li>{{data}}</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <p>Ex - 2 </p>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th> 
+                        <th scope="col">Skill</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let data of results1 ">
+                            <td>{{data.name}}</td>
+                            <td>{{data.skill}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2 ml-4">
+                <p>Ex - 3 </p>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th> 
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let data of results2 ">
+                            <td>{{data}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="my-3">
+    <h2>Share Replay</h2>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <strong>Users : <span class="text-primary">Users</span></strong>
+            <div class="row">
+                <div class="card">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <strong>Users : <span class="text-primary">Meta</span></strong>
+            <div class="row">
+                <div class="card">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4 all-products">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="card" *ngFor = "let item of allUsers">
+                    <img src="{{item.avatar}}" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <small>{{item.id}}</small>
+                        <h5 class="card-title">{{item.email}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{item.first_name}} {{item.last_name}}</h6>
+                        <d-flex class="align-items-center">
+                            <a href="" class="btn btn-dark btn-sm ml-auto">User Details</a>
+                        </d-flex>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="my-3">
+    <h2>Switch Map Search</h2>
+    <h5>Search ....</h5>
+    <form #searchForm="ngForm">
+        <div class="mt-4">
+            <input type="text" class="form-control form-control-lg" required name="searchTerm" autocomplete="off" ngModel>
+        </div>
+    </form>
+    <div class="results mt-4" *ngIf = "searchResultCount">
+        <div class="d-flex">
+            <h5>Search Results</h5>
+            <span class="ml-auto text-muted">{{searchResultCount}} Results found ....</span>
+        </div>
+        <div class="table mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Thumbnail</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let item of searchResults; index as i">
+                    <th scope="row">{{i+1}}</th>
+                    <td>
+                        <img src="{{item.thumb}}" width="120">
+                    </td>
+                    <td>
+                        <strong>{{item.title}}</strong>
+                        <p>{{item.description}}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </div>
+    </div>
+</div>
